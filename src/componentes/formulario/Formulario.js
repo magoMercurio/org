@@ -9,6 +9,7 @@ const Formulario = () => {
   const [nombre, setNombre] = useState('');
   const [puesto, setPuesto] = useState('');
   const [foto, setFoto] = useState('');
+  const [equipo, setEquipo] = useState('');
 
   const manejarEnvio = (evento) => {
     evento.preventDefault()
@@ -16,7 +17,8 @@ const Formulario = () => {
     let datosAEnviar = {
       nombre: nombre,
       puesto: puesto,
-      foto: foto
+      foto: foto,
+      equipo: equipo
     }
     console.log(datosAEnviar)
   }
@@ -46,7 +48,10 @@ const Formulario = () => {
           valor={foto}
           actualizarValor={setFoto} 
           />
-        <ListaOpciones />
+        <ListaOpciones
+          valor={equipo}
+          setEquipo={setEquipo}
+        />
         <Boton texto='Crear' />
       </form>
     </section>
