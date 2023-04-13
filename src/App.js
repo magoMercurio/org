@@ -4,6 +4,7 @@ import Header from './componentes/Header/Header'
 import Formulario from './componentes/formulario/Formulario.js'
 import MiOrg from './componentes/MiOrg'
 import Equipo from './componentes/equipo'
+import Footer from './componentes/Footer'
 
 
 function App() {
@@ -84,6 +85,7 @@ function App() {
           />
         })
       }
+      <Footer />
     </div>
   );
 }
