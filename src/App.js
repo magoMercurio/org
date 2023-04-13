@@ -60,7 +60,8 @@ function App() {
     <div className="App">
       <Header />
     {/*   {mostrarFormulario === true ? <Formulario /> : <></>} */}
-      {mostrarFormulario && <Formulario /> }
+      {mostrarFormulario && <Formulario equipos={equipos.map((equipo) => equipo.titulo)} /> 
+      }
       
       <MiOrg cambiarMostrarFormulario={cambiarMostrarFormulario} />
       
