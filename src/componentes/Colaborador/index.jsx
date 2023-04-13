@@ -16,7 +16,3 @@ const Colaborador = (props) => {
 }
 
 export default Colaborador
-
-{/*  https://github.com/magoMercurio.png
-          
-*/}
