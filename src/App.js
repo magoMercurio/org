@@ -10,7 +10,12 @@ import Footer from './componentes/Footer'
 function App() {
   
   const [mostrarFormulario, setMostrarFormulario] = useState(false)
-  const [colaboradores, setColaboradores] = useState([]);
+  const [colaboradores, setColaboradores] = useState([{
+      "equipo": "Front End",
+      "nombre": "Raul",
+      "puesto": "Web Dev",
+      "foto": "https://github.com/magoMercurio.png"
+  }]);
 
   //Ternario ---> condicion ? se muestra : no se muestra
 
