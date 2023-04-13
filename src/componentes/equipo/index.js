@@ -5,19 +5,24 @@ const Equipo = (props) => {
 
   //DESTRUCTURACION
   const { colorPrimario, colorSecundario, titulo } = props.datos
-
+  const { colaboradores } = props
   const bgc = {
     backgroundColor: colorSecundario
   }
+  console.log(colaboradores.length > 0)
   
-  return <section className="equipo" style={bgc} >
+  return <> 
+  { 
+    colaboradores.length > 0 &&  
+    <section className="equipo" style={bgc} >
       <h3 style={{ borderColor: colorPrimario }} >{ titulo }</h3>
       <div className="colaboradores">
-        <Colaborador />
-        <Colaborador />
-
+        {
+          colaboradores.map((colaborador, index) => <Colaborador datos={colaborador} key={index} />)
+        }
       </div>
     </section>
-}
+  }</>
+} 
 
 export default Equipo
