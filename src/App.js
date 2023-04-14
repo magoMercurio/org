@@ -10,12 +10,46 @@ import Footer from './componentes/Footer'
 function App() {
   
   const [mostrarFormulario, setMostrarFormulario] = useState(false)
-  const [colaboradores, setColaboradores] = useState([{
+  const [colaboradores, setColaboradores] = useState([
+    {
       "equipo": "Front End",
       "nombre": "Raul",
       "puesto": "Web Dev",
       "foto": "https://github.com/magoMercurio.png"
-  }]);
+    },
+    { 
+      "equipo": "Front End", 
+      "foto": "https://github.com/harlandlohora.png",
+      "nombre": "Harland Lohora", 
+      "puesto": "Instructor"
+    }, 
+    {
+      "equipo": "Programacion", 
+      "foto": "https://github.com/genesysaluralatam.png",
+      "nombre": "Genesys Rondon",
+      "puesto": "Desarrolladora de software e instructora"
+    },
+    {
+      "equipo": "UX y Diseño", 
+      "foto": "https://github.com/JeanmarieAluraLatam.png", 
+      "nombre": "Jeanmarie Quijada", 
+      "puesto": "Instructora en Alura Latam"
+    },
+    {
+      "equipo": "Programacion", 
+      "foto": "https://github.com/christianpva.png", 
+      "nombre": "Christian Velasco", 
+      "puesto": "Head de Alura e Instructor"
+    },
+    {
+      "equipo": "Innovacion y Gestión", 
+      "foto": "https://github.com/JoseDarioGonzalezCha.png", 
+      "nombre": "Jose Gonzalez",
+      "puesto": "Dev FullStack"
+    }
+
+
+]);
 
   //Ternario ---> condicion ? se muestra : no se muestra
 
@@ -28,6 +62,11 @@ function App() {
     console.log('nuevo colaborador', colaborador)
     //spread operator
     setColaboradores([...colaboradores, colaborador ])
+  }
+
+  //Eliminar Colaborador
+  const eliminarColaborador = () => {
+    console.log('Eliminar colaborador')
   }
 
   //Lista de Equipos
@@ -87,6 +126,7 @@ function App() {
           datos={equipo} 
           key={equipo.titulo}
           colaboradores={colaboradores.filter( colaborador => colaborador.equipo === equipo.titulo )}
+          eliminarColaborador={eliminarColaborador}
           />
         })
       }

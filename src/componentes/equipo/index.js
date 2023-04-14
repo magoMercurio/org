@@ -5,7 +5,7 @@ const Equipo = (props) => {
 
   //DESTRUCTURACION
   const { colorPrimario, colorSecundario, titulo } = props.datos
-  const { colaboradores } = props
+  const { colaboradores, eliminarColaborador } = props
   const bgc = {
     backgroundColor: colorSecundario
   }
@@ -21,7 +21,8 @@ const Equipo = (props) => {
           colaboradores.map((colaborador, index) => <Colaborador 
           datos={colaborador} 
           key={index} 
-          colorPrimario={colorPrimario} 
+          colorPrimario={colorPrimario}
+          eliminarColaborador={eliminarColaborador}
           />
         )}
       </div>
