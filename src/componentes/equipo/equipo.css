@@ -7,6 +7,7 @@
   font-size: 32px;
   font-weight: 400;
   font-family: 'montserrat', sans-serif;
+  position: relative;
 }
 
 .equipo h3 {
@@ -21,4 +22,10 @@
   display: flex;
   justify-content: space-evenly;
   flex-wrap:wrap;
+}
+
+.input-color {
+  position: absolute;
+  top: 20px;
+  right: 50px;
 }
