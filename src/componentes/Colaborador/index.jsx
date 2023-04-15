@@ -4,11 +4,16 @@ import { AiFillCloseCircle } from 'react-icons/ai'
 
 const Colaborador = (props) => {
   // eslint-disable-next-line no-unused-vars
-  const { nombre, puesto, foto, equipo } = props.datos
+  const { nombre, puesto, foto, equipo, id } = props.datos
   const { colorPrimario, eliminarColaborador } = props
   return <div className='colaborador'>
-    <AiFillCloseCircle onClick={eliminarColaborador} className='eliminar' />
-    <div className='encabezado' style={{backgroundColor: colorPrimario}} >
+    <AiFillCloseCircle
+      className='eliminar'
+      onClick={ () => eliminarColaborador(id) }
+    />
+    <div 
+      className='encabezado'
+      style={{backgroundColor: colorPrimario}} >
       <img src={ foto } alt={ nombre } />
     </div>
     <div className="info">

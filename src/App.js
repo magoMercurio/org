@@ -118,8 +118,10 @@ const [equipos, setEquipos] = useState([
   }
 
   //Eliminar Colaborador
-  const eliminarColaborador = () => {
-    console.log('Eliminar colaborador')
+  const eliminarColaborador = (id) => {
+    console.log('Eliminar colaborador', id)
+    const nuevosColaboradores = colaboradores.filter((colaborador) => colaborador.id !== id)
+    setColaboradores(nuevosColaboradores)
   }
 
   //Actualizar color de equipo
