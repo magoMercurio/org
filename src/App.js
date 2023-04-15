@@ -137,6 +137,12 @@ const [equipos, setEquipos] = useState([
     setEquipos(equiposActualizados)
   }
 
+  //Crear equipo
+  const crearEquipo = (nuevoEquipo) => {
+    console.log(nuevoEquipo)
+    setEquipos([...equipos, { ...nuevoEquipo, id: uuidv4() }])
+  }
+
   return (
     
     <div className="App">
@@ -144,6 +150,7 @@ const [equipos, setEquipos] = useState([
     {/*   {mostrarFormulario === true ? <Formulario /> : <></>} */}
       {mostrarFormulario && <Formulario equipos={equipos.map((equipo) => equipo.titulo)}
       registrarColaborador={registrarColaborador}
+      crearEquipo={crearEquipo}
       /> 
       }
       
